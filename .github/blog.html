@@ -1,0 +1,284 @@
+html
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insights | P&H Consult</title>
+    <style>
+      :root {
+        --primary: #2d5a27; /* Forest Green */
+        --secondary: #1a3a5f; /* Strategy Blue */
+        --gold: #f39c12; /* Impact Gold */
+        --white: #ffffff;
+        --light: #f9fbfa;
+      }
+
+      /* RESET & BASE */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Roboto, sans-serif;
+      }
+      body {
+        background: var(--white);
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* HEADER (Consistent across masterpiece) */
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 6%;
+        background: var(--white);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      .logo-area {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+      }
+      .logo-img {
+        height: 45px;
+        width: auto;
+        margin-right: 12px;
+      }
+      .logo-text {
+        font-size: 1.4rem;
+        font-weight: 800;
+        color: var(--secondary);
+      }
+      .logo-text span {
+        color: var(--primary);
+      }
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+      }
+      nav a {
+        text-decoration: none;
+        color: var(--secondary);
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      /* BLOG HEADER */
+      .blog-header {
+        padding: 80px 6% 40px;
+        text-align: center;
+        background: var(--light);
+        border-bottom: 1px solid #eee;
+      }
+      .blog-header h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        color: var(--secondary);
+        margin-bottom: 10px;
+      }
+
+      /* BLOG LAYOUT */
+      .blog-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 6%;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 60px;
+      }
+
+      /* POST PREVIEWS */
+      .article-card {
+        margin-bottom: 60px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 40px;
+      }
+      .category-tag {
+        color: var(--primary);
+        font-weight: 800;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: block;
+        margin-bottom: 15px;
+      }
+      .article-card h2 {
+        font-size: 1.8rem;
+        color: var(--secondary);
+        margin-bottom: 15px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .article-card h2:hover {
+        color: var(--gold);
+      }
+      .article-card p {
+        color: #666;
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+      .article-meta {
+        font-size: 0.85rem;
+        color: #999;
+        font-style: italic;
+      }
+
+      /* SIDEBAR: Mobile Optimized */
+      .sidebar {
+        position: sticky;
+        top: 120px;
+        height: fit-content;
+      }
+      .sidebar-box {
+        background: var(--bg-soft);
+        padding: 30px;
+        border-radius: 20px;
+        border: 1px solid #eee;
+        margin-bottom: 30px;
+      }
+      .sidebar-box h4 {
+        color: var(--secondary);
+        margin-bottom: 15px;
+        border-left: 4px solid var(--gold);
+        padding-left: 10px;
+      }
+
+      .newsletter-input {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      .btn-sub {
+        width: 100%;
+        padding: 12px;
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      /* MOBILE FIXES */
+      @media (max-width: 900px) {
+        .blog-container {
+          grid-template-columns: 1fr;
+        }
+        .sidebar {
+          position: static;
+        }
+      }
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          gap: 15px;
+        }
+        .blog-header {
+          padding: 60px 5%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo-area">
+        <img src="logo.png" alt="P&H Logo" class="logo-img" />
+        <div class="logo-text">P&H <span>Consult</span></div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="impact.html">Impact</a></li>
+          <li><a href="blog.html" style="color: var(--primary)">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="blog-header">
+      <h1>Insights & Ideas</h1>
+      <p>
+        Reflections on policy, governance, and the future of African
+        communities.
+      </p>
+    </div>
+
+    <div class="blog-container">
+      <main>
+        <article class="article-card">
+          <span class="category-tag">Governance & Strategy</span>
+          <h2>Can Democracy Truly Develop Africa?</h2>
+          <p>
+            An exploration of governance models that prioritize human dignity
+            and sustainable infrastructure over short-term political gains...
+          </p>
+          <div class="article-meta">By Michael Marah | 5 Min Read</div>
+        </article>
+
+        <article class="article-card">
+          <span class="category-tag">Social Entrepreneurship</span>
+          <h2>From Credit Traps to Credit Freedom</h2>
+          <p>
+            Discussing the impact of community-led business models on rural
+            families trapped in cycles of predatory lending...
+          </p>
+          <div class="article-meta">By P&H Insights Team | 4 Min Read</div>
+        </article>
+
+        <article class="article-card">
+          <span class="category-tag">Digital Literacy</span>
+          <h2>Why Software Infrastructure is Social Infrastructure</h2>
+          <p>
+            Mapping the connection between robust digital management and
+            community health outcomes in 2024...
+          </p>
+          <div class="article-meta">By Michael Marah | 7 Min Read</div>
+        </article>
+      </main>
+
+      <aside class="sidebar">
+        <div class="sidebar-box">
+          <h4>Newsletter</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 15px; color: #666">
+            Stay updated with our latest policy hot takes and field stories.
+          </p>
+          <input
+            type="email"
+            class="newsletter-input"
+            placeholder="your@email.com"
+          />
+          <button class="btn-sub">Join the Conversation</button>
+        </div>
+        <div class="sidebar-box">
+          <h4>Popular Topics</h4>
+          <p
+            style="
+              font-size: 0.9rem;
+              color: var(--primary);
+              line-height: 2.2;
+              font-weight: 600;
+              cursor: pointer;
+            "
+          >
+            #AgriTech #YouthAdvocacy #DigitalEquity #PolicyReflections
+          </p>
+        </div>
+      </aside>
+    </div>
+
+    <footer
+      style="background: #111; color: #aaa; padding: 40px; text-align: center"
+    >
+      &copy; 2024 P&H Consult. Sierra Leone | Kenya
+    </footer>
+  </body>
+</html>

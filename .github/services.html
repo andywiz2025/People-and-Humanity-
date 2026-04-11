@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services | P&H Consult</title>
+    <style>
+      :root {
+        --primary: #2d5a27; /* Forest Green */
+        --secondary: #1a3a5f; /* Strategy Blue */
+        --gold: #f39c12; /* Impact Gold */
+        --white: #ffffff;
+        --bg-soft: #f8faf9;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Roboto, sans-serif;
+      }
+      body {
+        background: var(--white);
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* HEADER (Consistent with Home) */
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 6%;
+        background: var(--white);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      .logo-area {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+      }
+      .logo-img {
+        height: 45px;
+        width: auto;
+        margin-right: 12px;
+      }
+      .logo-text {
+        font-size: 1.4rem;
+        font-weight: 800;
+        color: var(--secondary);
+      }
+      .logo-text span {
+        color: var(--primary);
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+      }
+      nav a {
+        text-decoration: none;
+        color: var(--secondary);
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      /* HERO BANNER */
+      .services-hero {
+        background:
+          linear-gradient(rgba(26, 58, 95, 0.8), rgba(26, 58, 95, 0.8)),
+          url("services-bg.jpg");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: clamp(60px, 10vh, 100px) 6%;
+        text-align: center;
+      }
+      .services-hero h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin-bottom: 15px;
+      }
+
+      /* MAIN 3 PILLARS SECTION */
+      .pillar-focus {
+        padding: 80px 6%;
+        text-align: center;
+      }
+      .pillar-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+      .pillar-box {
+        padding: 40px;
+        background: var(--bg-soft);
+        border-radius: 20px;
+        transition: 0.3s;
+        border-top: 6px solid var(--primary);
+      }
+      .pillar-box:hover {
+        transform: translateY(-10px);
+        background: white;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+      }
+      .pillar-box h3 {
+        margin-bottom: 15px;
+        color: var(--secondary);
+      }
+
+      /* DETAILED CATEGORIES */
+      .details-section {
+        padding: 80px 6%;
+        background: var(--secondary);
+        color: white;
+      }
+      .details-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 50px;
+      }
+      .category-item h2 {
+        color: var(--gold);
+        margin-bottom: 20px;
+        font-size: 1.6rem;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 10px;
+      }
+      .category-item ul {
+        list-style: none;
+      }
+      .category-item li {
+        margin-bottom: 12px;
+        position: relative;
+        padding-left: 25px;
+      }
+      .category-item li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--gold);
+        font-weight: bold;
+      }
+
+      /* CTA SECTION */
+      .co-create {
+        padding: 80px 6%;
+        text-align: center;
+      }
+      .btn-gold {
+        padding: 18px 40px;
+        background: var(--gold);
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: bold;
+        display: inline-block;
+        transition: 0.3s;
+      }
+
+      /* MOBILE FIXES */
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          gap: 15px;
+        }
+        .pillar-grid,
+        .details-grid {
+          grid-template-columns: 1fr;
+        }
+        .pillar-box {
+          padding: 30px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo-area">
+        <img src="logo.png" alt="P&H Logo" class="logo-img" />
+        <div class="logo-text">P&H <span>Consult</span></div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li>
+            <a href="services.html" style="color: var(--primary)">Services</a>
+          </li>
+          <li><a href="impact.html">Impact</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="services-hero">
+      <h1>Solutions for Humanity</h1>
+      <p>
+        Values-driven consulting tailored to your community's growth and goals.
+      </p>
+    </section>
+
+    <section class="pillar-focus">
+      <h2>Our Three Core Pillars</h2>
+      <div class="pillar-grid">
+        <div class="pillar-box">
+          <h3>Digital Literacy</h3>
+          <p>
+            Equipping teams with tech skills and software infrastructure
+            management.
+          </p>
+        </div>
+        <div class="pillar-box" style="border-top-color: var(--gold)">
+          <h3>Modern Agriculture</h3>
+          <p>Precision farming and sustainable solutions for food security.</p>
+        </div>
+        <div class="pillar-box" style="border-top-color: var(--secondary)">
+          <h3>Social Entrepreneurship</h3>
+          <p>
+            Designing mission-driven business models that create lasting impact.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="details-section">
+      <div class="details-grid">
+        <div class="category-item">
+          <h2>Strategic Advisory</h2>
+          <ul>
+            <li>Business & Nonprofit Consulting</li>
+            <li>Governance & Compliance Advisory</li>
+            <li>Project Monitoring & Evaluation (MEL)</li>
+            <li>Diversity, Inclusion & Change Management</li>
+          </ul>
+        </div>
+        <div class="category-item">
+          <h2>Capacity Building</h2>
+          <ul>
+            <li>Training & Team Development</li>
+            <li>Leadership & Career Coaching</li>
+            <li>Customized Learning Workshops</li>
+            <li>Stakeholder Mapping & Research</li>
+          </ul>
+        </div>
+        <div class="category-item">
+          <h2>Sector Optimization</h2>
+          <ul>
+            <li>Health & Education Service Delivery</li>
+            <li>Policy Briefs & Recommendations</li>
+            <li>Resource Mobilization</li>
+            <li>Inclusive Workplace Audits</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="co-create">
+      <h2 style="margin-bottom: 20px; color: var(--secondary)">
+        Need something custom?
+      </h2>
+      <p style="margin-bottom: 40px; color: #666">
+        We co-create solutions with you. No challenge is too complex for
+        human-centered design.
+      </p>
+      <a href="contact.html" class="btn-gold">Let's Talk Today</a>
+    </section>
+
+    <footer
+      style="background: #111; color: #aaa; padding: 40px; text-align: center"
+    >
+      &copy; 2024 P&H Consult. Sierra Leone | Kenya
+    </footer>
+  </body>
+</html>
