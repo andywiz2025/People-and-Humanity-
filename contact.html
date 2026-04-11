@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en-SL">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | P&H Consult</title>
+    <style>
+      :root {
+        --primary: #2d5a27; /* Forest Green */
+        --secondary: #1a3a5f; /* Strategy Blue */
+        --gold: #f39c12; /* Impact Gold */
+        --white: #ffffff;
+        --bg-soft: #f4f7f6;
+      }
+
+      /* BASE STYLES */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Roboto, sans-serif;
+      }
+      body {
+        background: var(--white);
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* HEADER (Consistent) */
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 6%;
+        background: var(--white);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      .logo-area {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+      }
+      .logo-img {
+        height: clamp(40px, 5vw, 50px);
+        width: auto;
+        margin-right: 12px;
+      }
+      .logo-text {
+        font-size: clamp(1.1rem, 2vw, 1.4rem);
+        font-weight: 800;
+        color: var(--secondary);
+      }
+      .logo-text span {
+        color: var(--primary);
+      }
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+        align-items: center;
+      }
+      nav a {
+        text-decoration: none;
+        color: var(--secondary);
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: 0.3s;
+      }
+      nav a:hover {
+        color: var(--primary);
+      }
+      .btn-login {
+        background: var(--secondary);
+        color: white !important;
+        padding: 8px 18px;
+        border-radius: 6px;
+      }
+
+      /* CONTACT HERO */
+      .contact-hero {
+        background:
+          linear-gradient(rgba(26, 58, 95, 0.8), rgba(26, 58, 95, 0.8)),
+          url("contact-hero.jpg");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 80px 6%;
+        text-align: center;
+      }
+      .contact-hero h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 800;
+        margin-bottom: 10px;
+      }
+
+      /* CONTACT CONTENT */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 6%;
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 60px;
+      }
+
+      /* LEFT SIDE: INFO */
+      .contact-info h2 {
+        color: var(--secondary);
+        font-size: 2rem;
+        margin-bottom: 25px;
+      }
+      .info-item {
+        margin-bottom: 30px;
+      }
+      .info-item h4 {
+        color: var(--primary);
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+      }
+      .info-item p {
+        font-size: 1.1rem;
+        color: #555;
+      }
+
+      .whatsapp-btn {
+        display: inline-block;
+        padding: 12px 25px;
+        background: #25d366;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 700;
+        transition: 0.3s;
+        margin-top: 10px;
+      }
+      .whatsapp-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+      }
+
+      /* RIGHT SIDE: FORM */
+      .contact-form {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+        border: 1px solid #eee;
+      }
+      .contact-form h3 {
+        margin-bottom: 25px;
+        color: var(--secondary);
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 700;
+        color: var(--secondary);
+        font-size: 0.9rem;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 14px;
+        margin-bottom: 20px;
+        border: 1.5px solid #eee;
+        border-radius: 8px;
+        background: #fdfdfd;
+        transition: 0.3s;
+      }
+      input:focus,
+      textarea:focus {
+        border-color: var(--primary);
+        outline: none;
+        background: white;
+      }
+
+      .btn-send {
+        width: 100%;
+        padding: 18px;
+        background: var(--secondary);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-weight: 800;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .btn-send:hover {
+        background: var(--primary);
+      }
+
+      /* MOBILE FIXES */
+      @media (max-width: 900px) {
+        header {
+          flex-direction: column;
+          gap: 15px;
+          padding: 15px 2%;
+        }
+        nav ul {
+          gap: 12px;
+          font-size: 0.8rem;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .container {
+          grid-template-columns: 1fr;
+          padding: 40px 5%;
+        }
+        .contact-hero {
+          padding: 60px 5%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo-area">
+        <img src="logo.png" alt="P&H Logo" class="logo-img" />
+        <div class="logo-text">P&H <span>Consult</span></div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="impact.html">Impact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li>
+            <a href="contact.html" style="color: var(--primary)">Contact</a>
+          </li>
+          <li><a href="login.html" class="btn-login">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="contact-hero">
+      <h1>We’d love to hear from you.</h1>
+      <p>
+        Let’s co-create solutions that drive sustainable growth for humanity.
+      </p>
+    </section>
+
+    <div class="container">
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+
+        <div class="info-item">
+          <h4>Email Us</h4>
+          <p>info@phconsult.org</p>
+        </div>
+
+        <div class="info-item">
+          <h4>Call or WhatsApp</h4>
+          <p>Sierra Leone: +232 XXX XXXX</p>
+          <a href="https://wa.me" class="whatsapp-btn">Chat on WhatsApp</a>
+        </div>
+
+        <div class="info-item">
+          <h4>Our Locations</h4>
+          <p>Freetown, Sierra Leone</p>
+          <p style="color: var(--gold); font-size: 0.9rem; font-weight: bold">
+            Nairobi, Kenya (Coming Soon)
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h3>Send a Message</h3>
+        <form action="#">
+          <label>Full Name</label>
+          <input type="text" placeholder="e.g., Michael Marah" required />
+
+          <label>Email Address</label>
+          <input type="email" placeholder="your@email.com" required />
+
+          <label>Subject</label>
+          <input type="text" placeholder="How can we help?" />
+
+          <label>Your Message</label>
+          <textarea
+            rows="5"
+            placeholder="Tell us about your project or inquiry..."
+            required
+          ></textarea>
+
+          <button type="submit" class="btn-send">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <footer
+      style="background: #111; color: #aaa; padding: 40px; text-align: center"
+    >
+      &copy; 2024 People and Humanity Consult (P&H Consult).
+    </footer>
+  </body>
+</html>

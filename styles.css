@@ -1,0 +1,16 @@
+@media (max-width: 768px) {
+  header {
+    padding: 15px 5%;
+    flex-direction: column;
+    gap: 15px;
+  }
+  nav ul {
+    gap: 12px; /* Slightly tighter gap for mobile */
+    font-size: 0.8rem; /* Smaller font for phones */
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .btn-login {
+    padding: 6px 12px; /* Smaller button for mobile */
+  }
+}
