@@ -20,6 +20,11 @@
         box-sizing: border-box;
         font-family: "Segoe UI", Roboto, sans-serif;
       }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
       body {
         background: var(--white);
         color: #333;
@@ -46,9 +51,10 @@
         text-decoration: none;
       }
       .logo-img {
-        height: clamp(40px, 5vw, 55px);
-        width: auto;
+        height: auto;
+        width: clamp(44px, 4vw, 60px);
         margin-right: 12px;
+        object-fit: contain;
       }
       .logo-text {
         font-size: clamp(1.1rem, 2vw, 1.5rem);
