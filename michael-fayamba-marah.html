@@ -44,18 +44,19 @@
     :root { --green:#2d5a27; --blue:#1a3a5f; --gold:#f39c12; --text:#29333b; --line:#dce5e1; }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
+    img { max-width:100%; height:auto; display:block; }
     body { margin:0; color:var(--text); font:16px/1.7 "Segoe UI",Roboto,Arial,sans-serif; background:#fff; }
     a { color:var(--blue); }
     a:focus-visible { outline:3px solid var(--gold); outline-offset:3px; }
     header { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:15px 6%; box-shadow:0 4px 12px #0000000d; background:#fff; position:sticky; top:0; z-index:10; }
     .brand { display:flex; align-items:center; gap:12px; text-decoration:none; font-size:1.3rem; font-weight:800; color:var(--blue); }
-    .brand img { height:48px; width:auto; }
+    .brand img { height:auto; width:clamp(44px,4vw,60px); object-fit:contain; }
     .brand span { color:var(--green); }
     nav ul { display:flex; flex-wrap:wrap; gap:18px; margin:0; padding:0; list-style:none; }
     nav a { text-decoration:none; font-size:.9rem; font-weight:600; }
     main { max-width:1120px; margin:auto; padding:50px 6% 80px; }
     .intro { display:grid; grid-template-columns:minmax(220px,310px) 1fr; gap:44px; align-items:center; }
-    .portrait { width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:18px; display:block; }
+    .portrait { width:min(100%, 310px); aspect-ratio:4/5; object-fit:cover; border-radius:18px; display:block; margin:0 auto; }
     .eyebrow { color:var(--green); font-weight:700; text-transform:uppercase; letter-spacing:.08em; }
     h1 { color:var(--blue); font-size:clamp(2.2rem,5vw,3.6rem); line-height:1.1; margin:.25em 0; }
     h2 { color:var(--blue); margin-top:0; }
@@ -78,7 +79,7 @@
 <body>
 <header>
   <a class="brand" href="index.html" aria-label="P&H Consult home">
-    <img src="logo.png" alt="P&H Consult logo">
+    <img src="logo.png" alt="P&H Consult logo" loading="lazy">
     P&amp;H <span>Consult</span>
   </a>
 
@@ -97,8 +98,7 @@
 
 <main>
   <section class="intro" aria-labelledby="founder-name">
-    <!-- Keep founder.jpg in the same folder as this HTML file. -->
-    <img class="portrait" src="founder.jpg" alt="Portrait of Michael Fayamba Marah" width="310" height="388">
+    <img class="portrait" src="founder.jpg" alt="Portrait of Michael Fayamba Marah" width="310" height="388" loading="lazy">
 
     <div>
       <p class="eyebrow">Meet our founder</p>
